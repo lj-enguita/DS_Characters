@@ -6,9 +6,16 @@ const images = [
     "bb-28.jpg"
 ];
 
+const names = [
+    "Sam Porter Bridges",
+    "Fragile",
+    "Deadman",
+    "Die Hardman",
+    "BB-28"
+];
+
 const characterImages = document.getElementById("character-images");
-
-
+const characterNames = document.getElementById("character-list-name");
 
 let index = 0;
 
@@ -26,3 +33,9 @@ function previousImage(){
 }
 
 showImage();
+
+images.forEach ((img, index) => {
+    const nameDiv = document.createElement("div");
+    
+})
+
