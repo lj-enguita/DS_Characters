@@ -13,22 +13,25 @@ header h1 {
     font-size: 2rem;
     margin: 20px 0 10px;
     text-shadow: 1px 1px 5px #000;
-    
 }
+
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
     max-width: 800px;
+    margin-top: 50px;
+    font-size: 1rem;
 }
-#character-list{
+#character-list-name{
     display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    
 }
 #viewer{
     width:80%;
@@ -37,6 +40,7 @@ main{
     display: block;
     align-content: center;
     margin: 0 auto;
+    font-size: 1rem;
 }
 button{
     background: rgba(100, 100, 120, 0.5);

@@ -34,8 +34,7 @@ function previousImage(){
 
 showImage();
 
-images.forEach ((img, index) => {
-    const nameDiv = document.createElement("div");
-    
-})
-
+function showImage(){
+    document.getElementById("viewer").src = images[index];
+    characterNames.textContent = names [index];
+}
