@@ -38,6 +38,7 @@ main{
     
 }
 #viewer{
+    position: relative;
     width:80%;
     max-width: 600px;
     height:auto;
@@ -62,9 +63,9 @@ button:hover{
     box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 #previous-button{
-    position: fixed;
+    position: absolute;
     top: 10%;
-    left: 20px;
+    left: -80px;
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -73,15 +74,18 @@ button:hover{
     transform:translateY(-50%);
 }
 #next-button{
-    position: fixed;
+    position: absolute;
     top: 10%;
-    right: 20px;
+    right: -80px;
     display:flex;
     flex-direction:column;
     gap:10px;
     margin-top: 260px;
     margin-right: 250px;
     transform:translateY(-50%);
+}
+#reveal-facts{
+    margin-top: 50px;
 }
 footer{
     margin-top: 30px;
@@ -130,4 +134,7 @@ footer{
     border-radius: 10px;
     margin-bottom: 15px;
     text-align: left;
+}
+#chiral-rainbow{
+    width:100%;
 }
