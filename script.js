@@ -30,20 +30,25 @@ const characterFacts = [
 const viewer = document.getElementById("viewer");
 const characterImages = document.getElementById("character-images");
 const characterNames = document.getElementById("character-list-name");
-const factsBox = document.getElementById("character-facts");
 const revealFactsBtn = document.getElementById("reveal-facts");
+const cardPanel = document.getElementById("card-panel");
+const cardImg = document.getElementById("card-image");
+const cardName = document.getElementById("card-name");
+const cardFacts = document.getElementById("card-facts");
+const hideCardBtn = document.getElementById("hide-card");
+
 
 let index = 0;
-let factsVisible = false;
+let cardVisible = false;
 
 function showImage(){
     viewer.src = images[index];
     viewer.style.display = "block";
     characterNames.textContent = names [index];
-
-    factsBox.style.display = "none";
-    factsVisible = false;
+    cardPanel.style.display = "none";
+    cardVisible = false;
     revealFactsBtn.textContent = "Top Facts";
+
 }
 
 function nextImage(){
@@ -56,21 +61,33 @@ function previousImage(){
 }
 
 revealFactsBtn.addEventListener("click", () => {
-    if (!factsVisible){
-        factsBox.textContent = characterFacts[index];
+    if (!cardVisible){
+        cardImg.src = images[index];
+        cardName.textContent = names[index];
+        
+        const factsArray = characterFacts[index].split("|").map (f => f.trim());
+        cardFacts.innerHTML = "";
+        const ul = document.createElement("ul");
+        factsArray.forEach(fact => {
+            const li = document.createElement("li");
+            li.textContent = fact;
+            ul.appendChild(li);
+        });
+        cardFacts.appendChild(ul);
+
         viewer.style.display = "none";
-        factsVisible = true;
-        revealFactsBtn.textContent = "Hide facts";
-        factsBox.style.display ="block";
+        cardPanel.style.display ="flex";
+        cardVisible = true;
     } else {
-        factsBox.style.display = "none";
-        viewer.style.display = "block";
-        factsVisible = false;
-        revealFactsBtn.textContent = "Top Facts";
+        showImage();
     }
 });
 
-
+hideCardBtn.addEventListener("click", () => {
+    cardPanel.style.display = "none";
+    viewer.style.display = "block";
+    cardVisible = false;
+})
 
 showImage();
 
