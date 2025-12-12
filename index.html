@@ -20,25 +20,29 @@
     <main>
 
         <div id="character-list-name"></div> 
+        <br>
+        <div id="character-images"></div>
 
-            <h2></h2>
+        <div id="previous-button">
+            <button onclick="previousImage()">⇠</button>
+         </div>
 
-            <div id="character-images"></div>
+        <div id="next-button">
+            <button onclick="nextImage()">⇢</button>
+        </div>
 
-            <div id="previous-button">
-                <button onclick="previousImage()"></button>
-            </div>
-
-            <div id="next-button">
-                <button onclick="nextImage()"></button>
-            </div>
-
-            <img id ="viewer" width="300">
+        <img id ="viewer" width="300">
 
     </main>
 
+    <section id="character-info">
+        <div id="character-facts" style="display:none;"></div>
+        <button id="reveal-facts">Top Facts</button>
+        <button id="get-to-know" style ="display:none;">Their Story</button>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Lj-Enguita - DS Charaters</p>
+        <p>&copy; 2025 LJ-Enguita - DS Charaters</p>
     </footer>
 
 
