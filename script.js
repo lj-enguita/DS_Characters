@@ -3,7 +3,14 @@ const images = [
     "fragile.jpg",
     "dead-man.jpg",
     "die-hardman.jpg",
-    "bb-28.jpg"
+    "bb-28.jpg",
+    "amelie-.jpg",
+    "higgs.jpg",
+    "cliff-unger.jpg",
+    "heartman.webp",
+    "mama.webp",
+    "mules.webp",
+    "bts.avif"
 ];
 
 const names = [
@@ -11,7 +18,14 @@ const names = [
     "Fragile",
     "Deadman",
     "Die Hardman",
-    "BB-28"
+    "BB-28",
+    "Amelie",
+    "Higgs Monaghan",
+    "Clifford Unger",
+    "Heartman",
+    "Malingen 'Mama'",
+    "Mules",
+    "Beached Things 'BT's'"
 ];
 
 const characterFacts = [
@@ -24,7 +38,10 @@ const characterFacts = [
     //Die hardman
     "Strength: 75 |BB Compatibility: 20 | Survival Skill: 70 | Stealth: 60 | Chiral Resistance: 70 | Leadership: 95",
     //BB-28
-    "•	Strength: 10 | BB Compatibility: 100 | Survival Skill: 40 | Stealth: 20 | Chiral Resistance: 85 | BT Detection: 100"
+    "•	Strength: 10 | BB Compatibility: 100 | Survival Skill: 40 | Stealth: 20 | Chiral Resistance: 85 | BT Detection: 100",
+    //Amelie
+    "	Strength: 65|BB Compatibility: 50|Survival Skill: 55|Stealth: 70|Chiral Resistance:100 |	Extinction Power: 100",
+
 ]
 
 const viewer = document.getElementById("viewer");
