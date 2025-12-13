@@ -24,7 +24,7 @@ const names = [
     "Clifford Unger",
     "Heartman",
     "Malingen 'Mama'",
-    "Mules",
+    "MULEs",
     "Beached Things 'BT's'"
 ];
 
@@ -40,8 +40,19 @@ const characterFacts = [
     //BB-28
     "•	Strength: 10 | BB Compatibility: 100 | Survival Skill: 40 | Stealth: 20 | Chiral Resistance: 85 | BT Detection: 100",
     //Amelie
-    "	Strength: 65|BB Compatibility: 50|Survival Skill: 55|Stealth: 70|Chiral Resistance:100 |	Extinction Power: 100",
-
+    "Strength: 65|BB Compatibility: 50|Survival Skill: 55|Stealth: 70|Chiral Resistance:100 |	Extinction Power: 100",
+    //Higgs
+    "Strength: 80 | BB Compatibility: 30 | Survival Skill: 75 | Stealth: 90 | Chiral Resistance: 95 |	Apex BT Control: 100",
+    //Cliff
+    "Strength: 95 | BB Compatibility: 100 | Survival Skill: 90 | Stealth: 85 | Chiral Resistance: 100 | Combat Skill: 100",
+    //Heartman
+    "Strength: 35 | BB Compatibility: 40 | Survival Skill: 50 | Stealth: 40 | Chiral Resistance: 85 | Scientific Knowledge: 100 | Time-Out Ability: 90",
+    //Mama
+    "Strength: 40 | BB Compatibility: 90 | Survival Skill: 50 | Stealth: 40 | Chiral Resistance: 90 | Chiral Engineering: 95",
+    //Mules
+    "Strength: 75 | BB Compatibility: 0 | Survival Skill: 60 | Stealth: 70 | Chiral Resistance: 55 | Cargo Obsession: 100",
+    //BTs
+    "Strength: 90 |BB Compatibility: 0 | Survival Skill: 100 | Stealth: 95 | Chiral Resistance: 100 | Detection Sensitivity: 90"    
 ]
 
 const viewer = document.getElementById("viewer");
@@ -53,10 +64,25 @@ const cardImg = document.getElementById("card-image");
 const cardName = document.getElementById("card-name");
 const cardFacts = document.getElementById("card-facts");
 const hideCardBtn = document.getElementById("hide-card");
-
+const theirStoryBtn = document.getElementById("get-to-know");
 
 let index = 0;
 let cardVisible = false;
+
+function storyName (){
+    const name = names[index].replace(/'/g, "'");
+    theirStoryBtn.textContent = (`${names[index]}'s story`)
+}
+
+// function storyName (){
+//     let name = names[index];
+//     if (name.endsWith("'s")){
+//         name = name.slice(0,-2);
+//     } else if (name.endsWith ("s")) {
+//         name = name.slice (0,-1);
+//     }
+//     theirStoryBtn.textContent = `${names}'s story`;
+// }
 
 function showImage(){
     viewer.src = images[index];
@@ -65,8 +91,10 @@ function showImage(){
     cardPanel.style.display = "none";
     cardVisible = false;
     revealFactsBtn.textContent = "Top Facts";
-
+    storyName();
 }
+
+showImage();
 
 function nextImage(){
     index = (index + 1) % images.length;
@@ -106,6 +134,8 @@ hideCardBtn.addEventListener("click", () => {
     cardVisible = false;
 })
 
-showImage();
 
+theirStoryBtn.addEventListener("click", () =>{
+
+});
 
